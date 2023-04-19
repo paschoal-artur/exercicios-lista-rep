@@ -1,19 +1,20 @@
 #Receiving information from user
 name = input("Type your name: \n")
 age = input("Type your age: \n")
+age = int(age)
 money = input("How much money do you receive? \n")
+money = int(money)
 sex = input("What's your sex? M or F \n")
 civil_state = input("What's you civil state? S, C, V, D \n")
-three = 3
-
-name_1 = name > "tri"
-age_1 = int(age) > 0 and int(age) < 150
-money_1 = int(money) > 0
-sex_1 = "M" or "F"
-civil_state_1 = "C" or "S" or "V" or "D"
-
-all_true = name_1 + age_1 + money_1 + sex_1 + civil_state_1
-
-while all_true :
+confirm = False
+while confirm == False:
+    if len(name) < 3 :
+        name = input("Type your name: \n")
+    if age < 0 or age > 150 :
+        age = int(input("Type your age: \n"))
+        age = int(age)
+    if money < 0 :
+        money = int(input("How much money do you receive? \n"))
+        money = int(money)
     print("All okay!")
     break
